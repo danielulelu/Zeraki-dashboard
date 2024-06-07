@@ -2,6 +2,7 @@ import "./dashboard.scss";
 import Sidebar from "../../components/sidebar/Sidebar"
 
 
+
 const dashboard = () => {
   return (
     <div className="home">
