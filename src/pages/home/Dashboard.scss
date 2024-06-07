@@ -1,6 +1,10 @@
-.dashboard {
-    // display: flex;
-    background-color: aqua;
+.home {
+    display: flex;
     margin: 10;
     padding: 10;
+
+    .home-container {
+        background-color: rgb(7, 173, 228);
+        flex: 3;
+    }
 }

@@ -1,12 +1,4 @@
 .sidebar {
-    background-color: #057ace;
-}
-
-.SidebarLayout {
-    display: flex;
-
-    .content {
-        flex-grow: 1;
-        padding: 20px;
-    }
+    background-color: lightcoral;
+    flex: 1;
 }

@@ -1,12 +1,17 @@
-import './Sidebar.scss';
+import "./sidebar.scss";
 
 const Sidebar = () => {
   return (
-    <div>
-      <div className="sidebar">
+    <div className="sidebar">
+      <div className="top">
         <span className="logo">Zeraki</span>
-
-        </div>
+      </div>
+      <div className="center">
+        <ul>
+          <li>Dashboard</li>
+          <li>School</li>
+        </ul>
+      </div>
     </div>
   );
 };
