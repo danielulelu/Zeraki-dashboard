@@ -19,10 +19,10 @@ function App() {
                 </SidebarLayout>
               }
             />
-            <Route path="/school" element={<School />} />
-            {/* school details */}
-            <Route path="/school/:id" element={<SchoolDetails />} />
           </Route>
+          <Route path="/school" element={<School />} />
+          {/* school details */}
+          <Route path="/school/:id" element={<SchoolDetails />} />
         </Routes>
       </Router>
     </div>
