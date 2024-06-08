@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SchoolList from "./SchoolList";
 import SchoolDetail from "./SchoolDetail";
 
+
 const School = () => {
   // create state for holding the list of schools
   const [schools, setSchools] = useState([]);

@@ -1,7 +1,7 @@
 import "./App.css";
 // import SidebarLayout from "./components/sidebar/SidebarLayout.jsx";
 import Dashboard from "./pages/home/Dashboard.jsx";
-import SchoolDetails from "./pages/school/SchoolDetails.jsx";
+import SchoolDetail from "./pages/school/SchoolDetail.jsx";
 import School from "./pages/school/School.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function App() {
 
           <Route path="/school" element={<School />} />
           {/* school details */}
-          <Route path="/school/:id" element={<SchoolDetails />} />
+          <Route path="/school/:id" element={<SchoolDetail />} />
         </Routes>
       </Router>
     </div>
