@@ -1,6 +1,7 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SchoolIcon from "@mui/icons-material/School";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -14,20 +15,21 @@ const Sidebar = () => {
           <li>
             <span>
               <DashboardIcon className="icon" />
-              Dashboard
+              <NavLink to="/">Dashboard</NavLink>
             </span>
           </li>
           <li>
             <span>
               <SchoolIcon className="icon" />
-              School
+              <NavLink to="/school">School</NavLink>
             </span>
           </li>
         </ul>
       </div>
 
-      <div className="color">
-        <span>Color Options</span>
+      <div className="bottom">
+        <div className="colorOption"></div>
+        <div className="colorOption"></div>
       </div>
     </div>
   );
