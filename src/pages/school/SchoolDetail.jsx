@@ -17,6 +17,10 @@ const SchoolDetail = ({ school }) => {
     ]);
   }, [school]);
 
+  if (!school) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="school-detail">
       <h2>{school.name} Details</h2>

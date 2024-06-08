@@ -6,7 +6,7 @@ import SchoolDetail from "./SchoolDetail";
 const School = () => {
   // create state for holding the list of schools
   const [schools, setSchools] = useState([]);
-  const [selectedSchool, setSelectedSchool] = useState([null]);
+  const [selectedSchool, setSelectedSchool] = useState(null);
 
   // simulate data fetching with static values
   useEffect(() => {
@@ -21,7 +21,7 @@ const School = () => {
   }, []);
 
   const handleSchoolSelect = (school) => {
-    setSelectedSchool([...selectedSchool, school]);
+    setSelectedSchool(school);
   };
   return (
     <div className="school-container">
