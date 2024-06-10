@@ -15,17 +15,18 @@ const Sidebar = () => {
       <hr />
       <div className="center">
         <ul>
+          <p className="title">Main Modules</p>
           <li>
+            <DashboardIcon className="icon" />
             <span>
-              <DashboardIcon className="icon" />
               <Link to="/" style={{ textDecoration: "none" }}>
                 Dashboard
               </Link>
             </span>
           </li>
           <li>
+            <SchoolIcon className="icon" />
             <span>
-              <SchoolIcon className="icon" />
               <Link to="/school" style={{ textDecoration: "none" }}>
                 School
               </Link>
@@ -35,15 +36,27 @@ const Sidebar = () => {
           <p className="title">Products</p>
           <li>
             <AnalyticsIcon className="icon" />
-            <span>Zeraki Analytics</span>
+            <span>
+              <Link to="/product/analytics" style={{ textDecoration: "none" }}>
+                Zeraki Analytics
+              </Link>
+            </span>
           </li>
           <li>
             <PaymentsIcon className="icon" />
-            <span>Zeraki Finance</span>
+            <span>
+              <Link to="/product/finance" style={{ textDecoration: "none" }}>
+                Zeraki Finance
+              </Link>
+            </span>
           </li>
           <li>
             <TocIcon className="icon" />
-            <span>Zeraki Timetable</span>
+            <span>
+              <Link to="/product/timetable" style={{ textDecoration: "none" }}>
+                Zeraki Timetable
+              </Link>
+            </span>
           </li>
         </ul>
       </div>
