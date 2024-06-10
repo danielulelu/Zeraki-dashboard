@@ -15,13 +15,17 @@ const Sidebar = () => {
           <li>
             <span>
               <DashboardIcon className="icon" />
-              <Link to="/">Dashboard</Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Dashboard
+              </Link>
             </span>
           </li>
           <li>
             <span>
               <SchoolIcon className="icon" />
-              <Link to="/school">School</Link>
+              <Link to="/school" style={{ textDecoration: "none" }}>
+                School
+              </Link>
             </span>
           </li>
         </ul>
