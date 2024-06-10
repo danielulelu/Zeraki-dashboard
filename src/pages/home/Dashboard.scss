@@ -1,10 +1,36 @@
 .home {
-    display: flex;
-    margin: 10;
-    padding: 10;
+  display: flex;
 
-    .home-container {
-        background-color: rgb(7, 173, 228);
-        flex: 3;
+  .home-container {
+    flex: 4;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .card {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 10px;
+      flex: 1 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: #7451f8;
+      }
+
+      h3 {
+        margin-bottom: 14px;
+      }
+
+      p {
+        font-size: 10px;
+        margin: 5px 0;
+      }
     }
+  }
 }
