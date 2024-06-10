@@ -1,4 +1,4 @@
-// import "./school.scss";
+import { Link } from "react-router-dom";
 
 const SchoolList = ({ schools, onSchoolSelect }) => {
   return (
@@ -7,7 +7,7 @@ const SchoolList = ({ schools, onSchoolSelect }) => {
       <ul>
         {schools.map((school) => (
           <li key={school.id} onClick={() => onSchoolSelect(school)}>
-            {school.name}
+            <Link to={`/school/${school.id}`} >{school.name}</Link>
           </li>
         ))}
       </ul>
