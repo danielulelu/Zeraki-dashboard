@@ -1,7 +1,7 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SchoolIcon from "@mui/icons-material/School";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -15,13 +15,13 @@ const Sidebar = () => {
           <li>
             <span>
               <DashboardIcon className="icon" />
-              <NavLink to="/">Dashboard</NavLink>
+              <Link to="/">Dashboard</Link>
             </span>
           </li>
           <li>
             <span>
               <SchoolIcon className="icon" />
-              <NavLink to="/school">School</NavLink>
+              <Link to="/school">School</Link>
             </span>
           </li>
         </ul>
