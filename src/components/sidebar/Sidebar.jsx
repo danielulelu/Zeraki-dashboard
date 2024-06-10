@@ -1,6 +1,9 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SchoolIcon from "@mui/icons-material/School";
+import AnalyticsIcon from "@mui/icons-material/Analytics";
+import PaymentsIcon from "@mui/icons-material/Payments";
+import TocIcon from "@mui/icons-material/Toc";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -27,6 +30,20 @@ const Sidebar = () => {
                 School
               </Link>
             </span>
+          </li>
+
+          <p className="title">Products</p>
+          <li>
+            <AnalyticsIcon className="icon" />
+            <span>Zeraki Analytics</span>
+          </li>
+          <li>
+            <PaymentsIcon className="icon" />
+            <span>Zeraki Finance</span>
+          </li>
+          <li>
+            <TocIcon className="icon" />
+            <span>Zeraki Timetable</span>
           </li>
         </ul>
       </div>
