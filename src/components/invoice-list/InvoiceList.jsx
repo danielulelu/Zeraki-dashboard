@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Modal, Box, Typography, TextField } from "@mui/material";
+import './invoicelist.scss'
 
 const InvoiceList = ({ invoices }) => {
   const [open, setOpen] = useState(false);
@@ -41,29 +42,34 @@ const InvoiceList = ({ invoices }) => {
         ))}
       </ul>
       <Modal open={open} onClose={handleClose}>
-        <Box
-          sx={{
-            width: 400,
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            bgColor: "background.paper",
-            boxShadow: 24,
-            p: 4,
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          <Typography variant="h6" gutterBottom>
-            Collect Payment
-          </Typography>
-          <Typography sx={{ mt: 2 }}>School: {selectedInvoice?.schoolName}</Typography>
-          <Typography sx={{ mt: 2 }}>Amount Due: {selectedInvoice?.amountDue}</Typography>
+        <>
+          <Box
+            sx={{
+              width: 400,
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              bgColor: "background.paper",
+              boxShadow: 24,
+              p: 4,
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
+              Collect Payment
+            </Typography>
+            <Typography sx={{ mt: 2 }}>
+              School: {selectedInvoice?.schoolName}
+            </Typography>
+            <Typography sx={{ mt: 2 }}>
+              Amount Due: {selectedInvoice?.amountDue}
+            </Typography>
             <TextField
               required
               id="amount"
               label="Amount"
               name="amount"
-              autoComplete="amount"              
+              autoComplete="amount"
               sx={{ mt: 1 }}
             />
           </Box>
@@ -74,6 +80,7 @@ const InvoiceList = ({ invoices }) => {
           >
             Confirm Payment
           </Button>
+        </>
       </Modal>
     </div>
   );

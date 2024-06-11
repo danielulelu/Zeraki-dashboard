@@ -1,0 +1,22 @@
+.invoice-list ul {
+    list-style: none;
+    padding: 0;
+
+    .invoice-list li {
+      display: flex;
+      justify-self: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+
+      .invoice-list li span {
+        flex: 1;
+        text-align: center;
+      }
+
+      .invoice-list li button {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
