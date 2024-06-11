@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./dashboard.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
+import InvoiceList from "../../components/invoice-list/InvoiceList";
 import Piechart from "../../components/charts/Piechart";
 // import Barchart from "../../components/charts/Barchart"
 
@@ -20,6 +21,7 @@ const Dashboard = () => {
     timetable: 0,
   });
   const [bouncedCheques, setBouncedCheques] = useState(0);
+  const [invoices, setInvoices] = useState([]);
 
   // Fetch data when the component mounts
   useEffect(() => {
@@ -38,6 +40,11 @@ const Dashboard = () => {
       timetable: 1289,
     });
     setBouncedCheques(2);
+    setInvoices([
+      { id: 1, schoolName: 'School A', amountDue: 1000, dueDate: '2024-06-10' },
+      { id: 2, schoolName: 'School B', amountDue: 500, dueDate: '2024-06-15' },
+      { id: 3, schoolName: 'School C', amountDue: 750, dueDate: '2024-06-20' },
+    ]);
   }, []);
 
   const signUpData = [
@@ -52,11 +59,11 @@ const Dashboard = () => {
     { name: "Timetable", value: totalRevenue.timetable },
   ];
 
-  const signUpDataAnalytics = [
-    { type: 'Primary', analytics: signUps.analytics.primary, finance: signUps.finance.primary, timetable: signUps.timetable.primary },
-    { type: 'Secondary', analytics: signUps.analytics.secondary, finance: signUps.finance.secondary, timetable: signUps.timetable.secondary },
-    { type: 'IGCSE', analytics: signUps.analytics.igcse, finance: signUps.finance.igcse, timetable: signUps.timetable.igcse },
-  ];
+  // const signUpDataAnalytics = [
+  //   { type: 'Primary', analytics: signUps.analytics.primary, finance: signUps.finance.primary, timetable: signUps.timetable.primary },
+  //   { type: 'Secondary', analytics: signUps.analytics.secondary, finance: signUps.finance.secondary, timetable: signUps.timetable.secondary },
+  //   { type: 'IGCSE', analytics: signUps.analytics.igcse, finance: signUps.finance.igcse, timetable: signUps.timetable.igcse },
+  // ];
 
   return (
     <div className="home">
@@ -86,10 +93,18 @@ const Dashboard = () => {
             <p>{bouncedCheques}</p>
           </div>
         </div>
+
+        {/* charts */}
         <div className="charts">
           <Piechart data={signUpData} title="Sign Ups" />
           <Piechart data={revenueData} title="Revenue"/>
           {/* <Barchart data={signUpDataAnalytics} title="Sign Ups Distribution" /> */}
+        </div>
+
+        {/* invoice-list */}
+        <div className="upcoming-invoices">
+          <h2>Invoices</h2>
+          <InvoiceList invoices={invoices} />
         </div>
       </div>
     </div>
