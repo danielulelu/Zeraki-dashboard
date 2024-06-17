@@ -1,0 +1,15 @@
+{
+    "schools": [
+      { "id": 1, "name": "Green Valley High", "type": "Secondary", "product": "Zeraki Analytics", "county": "Nairobi", "registrationDate": "2020-01-01", "contact": "info@greenvalleyhigh.com" },
+      { "id": 2, "name": "Blue Ridge Primary", "type": "Primary", "product": "Zeraki Finance", "county": "Kisumu", "registrationDate": "2019-05-15", "contact": "info@blueridgeprimary.com" }
+    ],
+    "invoices": [
+      { "id": 1, "schoolId": 1, "number": "INV001", "amount": 100, "paidAmount": 50, "status": "pending" },
+      { "id": 2, "schoolId": 1, "number": "INV002", "amount": 200, "paidAmount": 200, "status": "completed" }
+    ],
+    "collections": [
+      { "id": 1, "invoiceNumber": "INV001", "collectionNumber": "COL001", "date": "2023-01-10", "status": "Valid", "amount": 50 },
+      { "id": 2, "invoiceNumber": "INV002", "collectionNumber": "COL002", "date": "2023-02-05", "status": "Bounced", "amount": 100 }
+    ]
+  }
+  
