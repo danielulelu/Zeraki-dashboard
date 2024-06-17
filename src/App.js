@@ -3,9 +3,8 @@ import "./App.css";
 import Dashboard from "./pages/home/Dashboard.jsx";
 import SchoolDetail from "./pages/school/SchoolDetail.jsx";
 import School from "./pages/school/School.jsx";
-import Analytics from "./pages/products/Analytics.jsx";
-import Finance from "./pages/products/Finance.jsx";
-import Timetable from "./pages/products/Timetable.jsx";
+import Collections from "./pages/products/Collections.jsx";
+import Invoices from "./pages/products/Invoices.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,9 +18,8 @@ function App() {
           {/* school details */}
           <Route path="/school/:id" element={<SchoolDetail />} />
 
-          <Route path="/product/analytics" element={<Analytics />} />
-          <Route path="/product/finance" element={<Finance />} />
-          <Route path="/product/timetable" element={<Timetable />} />
+          <Route path="/product/collections" element={<Collections />} />
+          <Route path="/product/invoices" element={<Invoices />} />
 
           <Route
             path="*"

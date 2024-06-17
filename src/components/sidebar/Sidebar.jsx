@@ -2,7 +2,6 @@ import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import SchoolIcon from "@mui/icons-material/School";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
-import PaymentsIcon from "@mui/icons-material/Payments";
 import TocIcon from "@mui/icons-material/Toc";
 import { Link } from "react-router-dom";
 
@@ -37,24 +36,17 @@ const Sidebar = () => {
           <li>
             <AnalyticsIcon className="icon" />
             <span>
-              <Link to="/product/analytics" style={{ textDecoration: "none" }}>
-                Zeraki Analytics
+              <Link to="/product/collections" style={{ textDecoration: "none" }}>
+                Collections
               </Link>
             </span>
           </li>
-          <li>
-            <PaymentsIcon className="icon" />
-            <span>
-              <Link to="/product/finance" style={{ textDecoration: "none" }}>
-                Zeraki Finance
-              </Link>
-            </span>
-          </li>
+         
           <li>
             <TocIcon className="icon" />
             <span>
-              <Link to="/product/timetable" style={{ textDecoration: "none" }}>
-                Zeraki Timetable
+              <Link to="/product/invoices" style={{ textDecoration: "none" }}>
+                Invoices
               </Link>
             </span>
           </li>
