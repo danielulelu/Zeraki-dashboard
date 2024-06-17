@@ -1,0 +1,83 @@
+.sidebar {
+  flex: 1.5;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  min-height: 100vh;
+  background-color: #d49cf1;
+}
+.sidebar .top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .top .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6439ff;
+}
+.sidebar hr {
+  height: 0;
+  border: 0.5px solid rgb(230, 227, 227);
+}
+.sidebar .center {
+  padding-left: 10px;
+}
+.sidebar .center :first-child {
+  margin-bottom: 20px;
+}
+.sidebar .center ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar .center ul .title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #999;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.sidebar .center ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(230, 227, 227);
+}
+.sidebar .center ul li:hover {
+  background-color: #ece8ff;
+}
+.sidebar .center ul li .icon {
+  font-size: 18px;
+  color: #7452f8;
+  margin-right: 10px;
+}
+.sidebar .center ul li span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #888;
+  margin-left: 10px;
+}
+.sidebar .bottom {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+.sidebar .colorOption {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #7451f8;
+  cursor: pointer;
+  margin-top: 90px;
+  flex-grow: inherit;
+}
+.sidebar .colorOption:nth-child(1) {
+  background-color: whitesmoke;
+  margin-left: 20px;
+}
+.sidebar .colorOption:nth-child(2) {
+  background-color: darkblue;
+  margin-left: 100px;
+}
